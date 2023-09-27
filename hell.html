@@ -184,7 +184,7 @@
     <input type="checkbox" id="check">
     <header>
         <div class="left_area">
-            <h3>Hospital Management</h3>
+            <h3 >Hospital Management</h3>
         </div>
     </header>
     <div class="sidebar">
@@ -203,8 +203,8 @@
     <div class="section">
         <div class="card mb-3" style="background-color: lightgrey; cursor: pointer;" onclick="showtable1()">
             <div class="card-body">
-                <h2 class="card-title">Total Applicants</h2>
-                <h1 th:text="${claims.size()}" class="card-text"></h1>
+                <h2 class="card-title"  style="font-family:times-roman">Active Applicants</h2>
+                <h1 style="font-family:times-roman" th:text="${claims.size()}" class="card-text"></h1>
             </div>
         </div>
     </div>
@@ -212,8 +212,8 @@
     <div class="sections">
         <div class="card mb-3" style="background-color: lightgrey; cursor: pointer;" onclick="showtable2()">
             <div class="card-body">
-                <h2 class="card-title">Completed claims</h2>
-                <h1 th:text="${claimsunderprocess.size()}" class="card-text"></h1>
+                <h2 class="card-title"  style="font-family:times-roman">Total Applicants</h2>
+                <h1  style="font-family:times-roman" th:text="${claimsunderprocess.size()}" class="card-text"></h1>
             </div>
         </div>
     </div>
