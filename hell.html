@@ -153,17 +153,18 @@
     display: inline-block;
     width: 30%;
     vertical-align: top;
-    margin-left: 25%; /* Adjust this margin to create space between the two sections */
+    margin-left: 5%; /* Adjust this margin to create space between the two sections */
     margin-top: 10%;
-    
+  
 }
 
 .sections {
     display: inline-block;
-    width: 30%;
+    width: 40%;
     vertical-align: top;
     margin-left: 10px; /* Adjust this margin to create space between the two sections */
     margin-top: 10%;
+    padding-left:10%;
 }
 
 
@@ -197,28 +198,27 @@
         <a th:href="@{/rejected}"><i class="fas fa-product-hunt"></i><span>Rejected claims</span></a>
         <a th:href="@{/adminlogin}"><i class="fas fa-question-circle"></i><span>Log out</span></a>
     </div>
-    <div class="context">
-        <div class="section">
-            <div style="display: inline-block;">
-                <h2>Total Applicants</h2>
+  <div class="content">
+   
+    <div class="section">
+        <div class="card mb-3" style="background-color: lightgrey; cursor: pointer;" onclick="showtable1()">
+            <div class="card-body">
+                <h2 class="card-title">Total Applicants</h2>
+                <h1 th:text="${claims.size()}" class="card-text"></h1>
             </div>
-            <div style="display: inline-block; margin-left: 20px;">
-                <h1 th:text="${claims.size()}"></h1>
-            </div>
-            <br><br>
-            <button class="btn btn-secondary" onclick="showtable1()">View all</button>
-        </div>
-        <div class="sections">
-            <div style="display: inline-block;">
-                <h2>Completed claims</h2>
-            </div>
-            <div style="display: inline-block; margin-left: 20px;">
-                <h1 th:text="${claimsunderprocess.size()}"></h1>
-            </div>
-            <br><br>
-            <button class="btn btn-secondary" onclick="showtable2()">View all</button>
         </div>
     </div>
+
+    <div class="sections">
+        <div class="card mb-3" style="background-color: lightgrey; cursor: pointer;" onclick="showtable2()">
+            <div class="card-body">
+                <h2 class="card-title">Completed claims</h2>
+                <h1 th:text="${claimsunderprocess.size()}" class="card-text"></h1>
+            </div>
+        </div>
+    </div>
+</div>
+
     <div class="content">
         <table border="1" id="applicantTable" style="display: none;">
             <tr>
