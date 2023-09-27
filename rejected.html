@@ -190,27 +190,23 @@
         <a th:href="@{/adminlogin}"><i class="fas fa-question-circle"></i><span>Log out</span></a>
     </div>
    
- <div class="content">
+<div class="content">
             <!-- Total Applicants Section -->
             <div class="section">
-            <div style="display: inline-block;">
-                <h2>Rejected Bills</h2>
-            </div>
-            <div style="display: inline-block; margin-left: 20px;">
-                <h1 th:text="${rejectedbills.size()}"></h1>
-            </div>
-            <br><br>
-            <button class="btn btn-secondary" onclick="showtable1()">View all</button>
+        <div class="card mb-3" style="background-color: lightgrey; cursor: pointer;">
+            <div class="card-body">
+                <h2 style="font-family:times-roman" class="card-title">Rejected Bills:
+                <span th:text="${rejectedbills.size()}"></span></h1>
+             </div>
         </div>
-            
-            <!-- Total Claims Section -->
-           
     </div>
+</div>
+ 
 
     <div class="content">
  
        
-      <table border="1" id="applicantTable" style="margin-left:280px; display: none;"> 
+      <table border="1" id="applicantTable" style="margin-left:280px; "> 
               <tr>
            
                 <th>Sl no.</th>
@@ -261,12 +257,7 @@
             table2.style.display = "none";
         }
 
-        function showtable2() {
-            var table1 = document.getElementById("applicantTable");
-            table1.style.display = "none";
-            var table2 = document.getElementById("underprocess");
-            table2.style.display = "table";
-        }
+    
 
         $(document).ready(function() {
             $(".submenu").hide();
