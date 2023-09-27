@@ -216,14 +216,14 @@
 			<div class="card" onclick="showtable1()"
 				style="background-color: lightgrey; cursor: pointer;">
 				<div class="card-body">
-					<h2 class="card-title text-center">Claimed Amount:</h2>
+					<h2 style="font-family:times-roman" class="card-title text-center">Claimed Amount:</h2>
 					<div th:each="clmbills,sl : ${claimedamt}">
 						<!-- Hidden input field for each item's claim amount -->
 						<input type="hidden" id="amount"
 							th:value="${clmbills.clbl_claim_amount}" />
 					</div>
 					<!-- Display the total claim amount (JavaScript will handle this) -->
-					<h1 class="card-text text-center">
+					<h1  style="font-family:times-roman" class="card-text text-center">
 						Total Amount: <span id="totalClaimAmount"></span>
 					</h1>
 				</div>
@@ -238,14 +238,14 @@
 			<div class="card" onclick="showtable2()"
 				style="background-color: lightgrey; cursor: pointer;">
 				<div class="card-body">
-					<h2 class="card-title text-center">Total Amounts To:</h2>
+					<h2 style="font-family:times-roman" class="card-title text-center">Total Amounts To:</h2>
 					<div th:each="clmbills,sl : ${total_amount}">
 						<!-- Hidden input field for each item's claim amount -->
 						<input type="hidden" id="totalamt"
 							th:value="${clmbills.clbl_claim_amount}" />
 					</div>
 					<!-- Display the total claim amount (JavaScript will handle this) -->
-					<h1 class="card-text text-center">
+					<h1 style="font-family:times-roman" class="card-text text-center">
 						Total Amount: <span id="totalAmount"></span>
 					</h1>
 				</div>
